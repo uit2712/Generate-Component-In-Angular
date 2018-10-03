@@ -6,21 +6,13 @@ import { TodoItem } from './todo-item';
   templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.css']
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent {
 
-  todoInfo: TodoItem = {
-    id: 1,
-    content: 'Play game LOL',
-    todoDate: new Date(2018, 8, 29)
-  };
+  todoInfo: TodoItem;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  todoDateChange(date: Date) {
-    if(date != null)
-      this.todoInfo.todoDate = date;
+  constructor() { 
+    this.todoInfo = new TodoItem();
+    this.todoInfo.id = 1;
+    this.todoInfo.content = 'Play game LOL';
   }
 }

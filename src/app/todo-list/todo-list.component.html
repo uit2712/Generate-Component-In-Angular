@@ -1,0 +1,20 @@
+<!-- <div *ngFor="let todoItem of todoList">
+  <h4>Id {{ todoItem.id }}: {{ todoItem.content | uppercase }} on {{ todoItem.todoDate | date: 'dd-MM-yyyy' }}</h4>
+</div>
+ -->
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Todo info</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todoItem of todoList">
+      <td>{{ todoItem.id }}</td>
+      <td>{{ todoItem.content | uppercase }}</td>
+      <td>{{ todoItem.todoDate | date: 'dd-MM-yyyy' }}</td>
+    </tr>
+  </tbody>
+</table>

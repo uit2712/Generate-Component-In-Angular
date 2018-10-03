@@ -1,0 +1,4 @@
+<h3>This is my todo item</h3>
+<h4>Id {{ todoInfo.id }}: {{ todoInfo.content | uppercase }} on {{ todoInfo.todoDate | date: 'dd-MM-yyyy' }}</h4>
+<input type="text" value="{{ todoInfo.content }}" [(ngModel)]="todoInfo.content">
+<input type="date" value="{{ todoInfo.todoDate }}" [ngModel]="todoInfo.todoDate | date: 'yyyy-MM-dd'" (ngModelChange)="todoDateChange($event)">
